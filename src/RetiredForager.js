@@ -18,5 +18,7 @@ RetiredForagerBee.prototype.forage = function () {
 }
 
 RetiredForagerBee.prototype.gamble = function (treasure) {
-  this.treasureChest.push(treasure);
+  ForagerBee.prototype.forage.call(this, treasure);
+  // this.treasureChest.push(treasure); 
+  // - bad if ForagerBee's forage function is 20 lines ;ong
 }
